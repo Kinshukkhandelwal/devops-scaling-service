@@ -1,0 +1,29 @@
+{
+  "payment-service:development": {
+    "fixture_id": "FIX-POL-001",
+    "service_id": "payment-service",
+    "environment": "development",
+    "min_replicas": 1,
+    "max_replicas": 5,
+    "requires_human_approval": false,
+    "max_error_rate_threshold": 0.05
+  },
+  "payment-service:production": {
+    "fixture_id": "FIX-POL-002",
+    "service_id": "payment-service",
+    "environment": "production",
+    "min_replicas": 2,
+    "max_replicas": 10,
+    "requires_human_approval": true,
+    "max_error_rate_threshold": 0.05
+  },
+  "cart-service:development": {
+    "fixture_id": "FIX-POL-003",
+    "service_id": "cart-service",
+    "environment": "development",
+    "min_replicas": 1,
+    "max_replicas": 5,
+    "requires_human_approval": false,
+    "max_error_rate_threshold": 0.05
+  }
+}

@@ -1,0 +1,8 @@
+# DevOps Replica Scaling Service workspace creation
+
+
+curl -X POST http://localhost:8000/plan \\ -H "Content-Type: application/json" \\ -H "X-API-Token: nerdy-secret-token-123" \\ -d '{ "service\_id": "payment-service", "environment": "development", "desired\_replicas": 3, "reason": "Preparing for anticipated traffic surge." }'
+
+curl -X POST http://localhost:8000/plan \\ -H "Content-Type: application/json" \\ -H "X-API-Token: nerdy-secret-token-123" \\ -d '{ "service\_id": "cart-service", "environment": "development", "desired\_replicas": 3, "reason": "Attempting to scale high-error service." }'
+
+curl -X POST http://localhost:8000/plan \\ -H "Content-Type: application/json" \\ -H "X-API-Token: nerdy-secret-token-123" \\ -d '{ "service\_id": "payment-service", "environment": "production", "desired\_replicas": 4, "reason": "Scaling production for Black Friday traffic." }'
